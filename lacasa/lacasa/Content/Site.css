@@ -1,0 +1,334 @@
+﻿ 
+
+@media (min-width: 1200px) {
+    .navbar-header {
+        display: none;
+    }
+
+    #menuhalf {
+        display: none;
+    }
+
+    #menu1id {
+        display: block;
+    }
+    #imagemargin {
+        margin-top:-50px;
+    }
+    
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+    #cssmenu11.align-center > ul > li {
+  display: list-item;
+  float: none;
+}
+     .navbar-header {
+        display: block;
+    }
+
+    #menuhalf {
+        display: none;
+    }
+
+    #menu1id {
+        display: block;
+    }
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    padding: 0px;
+
+}
+     #imagemargin {
+        margin-top:-50px;
+    }
+}
+@media (max-width: 759px) {
+    .navbar-header {
+        display: block;
+    }
+
+    #menuhalf {
+        display: block;
+    }
+
+    #menu1id {
+        display: none;
+    }
+     #imagemargin {
+        margin-top:0px;
+    }
+    #logo {
+                display: none;
+
+    }
+}
+ 
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus
+{    border-right: 3px solid #9A341D;
+    border-left: 3px solid #99301B;
+    background: linear-gradient(0deg, rgb(166, 59, 15) 31%, #A0380E 9%, rgb(211, 105, 25) 90%);
+    }
+
+.navbar-inverse {
+    background-color: rgba(34, 34, 34, 0) !important;
+    border-color: rgba(8, 8, 8, 0) !important;
+}
+.menu {
+    border-image: url(../images/home/menuribbon.png);
+    border-image-slice: 26%;
+    border-right: 40px solid rgba(255, 0, 0, 0);
+    /* padding: 0px 0px 0px 0px; */
+    border-left: 49px solid rgba(255, 0, 0, 0);
+    padding: 0px 0px 0px 0px;
+    border-top: 2px solid rgba(255, 0, 0, 0);
+    border-bottom: 19px solid rgba(255, 0, 0, 0);
+    z-index: 11111;
+    position: inherit;
+}
+
+ 
+
+.upperbg {
+background: linear-gradient(180deg,#D2681A 29%,rgb(224, 115, 21) 24px );   height:15px;
+}
+.navbar-header {
+    background: linear-gradient(180deg,#B34212 -69%,rgb(160, 56, 14) 30px )!important;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff!important;
+    background-color: transparent;
+    font-family:myraid pro;
+        text-transform: capitalize;
+
+}
+.footer {
+         background-image:url(../images/footer.jpg);
+ height: 650PX;
+    BACKGROUND-REPEAT:repeat-x;
+ }
+    .footer ul {
+            padding: 0px;
+
+    }
+    .footer ul li a {
+        color:black;
+            line-height: 26px;
+            list-style-type:none;
+                font-weight: bold;
+                    text-transform: capitalize;
+
+
+
+    }
+        .footer ul li {
+        color:black;
+            line-height: 26px;
+            list-style-type:none;
+                font-weight: bold;
+                
+
+
+    }
+
+    .footer h3 {
+                    color: black;
+    text-transform: uppercase;
+    font-family: myraid pro;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.mainbg {
+background: linear-gradient(180deg,#0F1217 -51%,#101116 154%);
+
+}
+.index  p{
+    color:white;
+    text-align:justify;
+        
+} 
+
+/*social*/
+
+
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+/* footer social icons */
+.social-network a.icoRss  {
+	background-color: #F56505;
+}
+.social-network a.icoFacebook{
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter  {
+	background-color:#33ccff;
+}
+.social-network a.icoGoogle  {
+	background-color:#BD3518;
+}
+.social-network a.icoVimeo  {
+	background-color:#0590B8;
+}
+.social-network a.icoLinkedin  {
+	background-color:#007bb7;
+}
+.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+	color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+    width: 30px;
+    height: 31px;
+    font-size: 21px;
+}
+.social-circle li i {
+	margin:0;
+    line-height: 32px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+   
+.innerpage p {
+    color:white;
+    font-family:Calibri;
+    text-align:justify;
+}
+.innerpage h4 {
+         color: RED;
+    font-family: MYRAID PRO;
+    text-transform: uppercase;
+    FONT-WEIGHT: 600;
+}
+.banner {
+        width: 100%;
+    position: relative;
+    z-index: -222222;
+    top: -76px;
+}
+.index h3{
+      color: RED;
+    font-family: MYRAID PRO;
+    text-transform: uppercase;
+    FONT-WEIGHT: 600;
+}
+.menuitems img {
+        box-shadow: 0px 0px 7px 2px rgb(230, 223, 205);
+
+}
+.menuitems h3 {
+    color: #EB9048;
+    font-family: MYRAID PRO;
+    text-transform: uppercase;
+    FONT-WEIGHT: 600;
+    font-size: 15px;
+
+}
+.innerpage h2 {
+     color: white;
+    font-family: MYRAID PRO;
+    text-transform: uppercase;
+    FONT-WEIGHT: 600;
+        font-size: 17px;
+
+}
+ /*home_delivery*/
+ .home_delivery h3 {
+         color: RED;
+    font-family: MYRAID PRO;
+    text-transform: uppercase;
+    FONT-WEIGHT: 600;
+        font-size: 18px;
+
+}
+
+.home_delivery  h4{
+    color: white;
+    font-family: MYRAID PRO;
+    text-transform: uppercase;
+    FONT-WEIGHT: 600;
+    text-align: center;
+    font-size: 14px;
+}
+.boldclass {
+    color: #EB9048;
+        font-family: cursive;
+            font-size: 20px;
+
+
+}
+.orangbg {
+    background-color: rgba(0, 0, 0, 0.69);    height: 48PX;
+min-width: 100%;
+}
+.orangbg  p{
+       color: #5A8A05;
+    font-family: Calibri;
+    font-size: 17px;
+    font-weight: 700;
+
+}
+.opening {
+    color: red;
+    font-family: Calibri;
+    font-size: 16px;
+    text-align: center;
+
+    font-family: myraid pro;
+}
+.popuplacasa {
+    color: red;
+    font-size: 17px;
+    font-weight: 700;
+
+}
+.slidercaption {
+      font-size: 18px;
+    color: #a6ce39;
+    text-shadow: 1px 2px 3px #0f1116;
+    font-weight: 600;
+}

@@ -1,0 +1,471 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="clearfix"></div>
+<div class="sliderbg" style=" margin: -95px 0px 0px 0px;">
+
+    <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#transition-timer-carousel" data-slide-to="1" class=""></li>
+            <li data-target="#transition-timer-carousel" data-slide-to="2" class=""></li>
+            <li data-target="#transition-timer-carousel" data-slide-to="3" class=""></li>
+           <li data-target="#transition-timer-carousel" data-slide-to="4" class=""></li>
+                <li data-target="#transition-timer-carousel" data-slide-to="5" class=""></li>
+                @*<li data-target="#transition-timer-carousel" data-slide-to="6" class=""></li>*@
+
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+
+            <div class="item active">
+                <img src="~/Images/home/banner.jpg" class="img-responsive" alt="Silver Track Systems" width="100%">
+                <div class="carousel-caption">
+                    <h1 id="1" class="carousel-caption-header"></h1>
+                    <p class="carousel-caption-text hidden-sm hidden-xs slidercaption">
+                        MAKE YOUR DINING A MEMORABLE DAY OUT
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="item ">
+                <img src="~/Images/home/burgereating.png" class="img-responsive" alt="Silver Track Systems" width="100%">
+                <div class="carousel-caption">
+                    <h1 id="1" class="carousel-caption-header"></h1>
+                    <p class="carousel-caption-text hidden-sm hidden-xs slidercaption">
+                        MAKE YOUR DINING A MEMORABLE DAY OUT
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="item ">
+                <img src="~/Images/home/lacasainside.png" class="img-responsive" alt="Silver Track Systems" width="100%">
+                <div class="carousel-caption">
+                    <h1 id="1" class="carousel-caption-header"></h1>
+                    <p class="carousel-caption-text hidden-sm hidden-xs slidercaption">
+                        MAKE YOUR DINING A MEMORABLE DAY OUT
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="item ">
+                <img src="~/Images/home/lacasadoorstep.png" class="img-responsive" alt="Silver Track Systems" width="100%">
+                <div class="carousel-caption">
+                    <h1 id="1" class="carousel-caption-header"></h1>
+                    <p class="carousel-caption-text hidden-sm hidden-xs slidercaption">
+                        MAKE YOUR DINING A MEMORABLE DAY OUT
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="item ">
+                <img src="~/Images/home/lacasatreat.jpg" class="img-responsive" alt="Silver Track Systems" width="100%">
+                <div class="carousel-caption">
+                    <h1 id="1" class="carousel-caption-header"></h1>
+                    <p class="carousel-caption-text hidden-sm hidden-xs slidercaption">
+                        MAKE YOUR DINING A MEMORABLE DAY OUT
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="item ">
+                <img src="~/Images/home/lacasabar.jpg" class="img-responsive" alt="Silver Track Systems" width="100%">
+                <div class="carousel-caption">
+                    <h1 id="1" class="carousel-caption-header"></h1>
+                    <p class="carousel-caption-text hidden-sm hidden-xs slidercaption">
+                        MAKE YOUR DINING A MEMORABLE DAY OUT
+
+
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev" style="background-image: -webkit-gradient(linear,0 top,100% top,from(rgba(0,0,0,.0001)),to(rgba(0, 0, 0, 0)));">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#transition-timer-carousel" data-slide="next" style="background-image: -webkit-gradient(linear,0 top,100% top,from(rgba(0,0,0,.0001)),to(rgba(0, 0, 0, 0)));">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+        <!-- Timer "progress bar" -->
+
+    </div>
+
+</div>
+
+<script>
+    function checkSlide() {
+        if (window.innerWidth >= 768) {
+            document.getElementById('1').style.display = 'block';
+            document.getElementById('2').style.display = 'block';
+            document.getElementById('3').style.display = 'block';
+            document.getElementById('4').style.display = 'block';
+            document.getElementById('5').style.display = 'block';
+            document.getElementById('6').style.display = 'block';
+            document.getElementById('7').style.display = 'block';
+        }
+    }
+    window.onload = checkSlide;
+</script>
+<div class="mainbg">
+    <div class="container index" style="padding:0px 0px 0px 0px;">
+        <div class="col-sm-9">
+            <h3>
+                Welcome to La Casa Restaurant
+                <br />
+                <br />
+                <br />
+
+
+            </h3>
+
+
+            <div class="col-sm-4">
+                <a href="~/Home/About">
+
+                    <img src="~/images/home/lacasa1.png" alt="Alternate Text" style="width:89%" />
+                </a>
+            </div>
+
+
+            <div class="col-sm-8">
+                <p style="color: #87A303;
+    font-size: 12px;">
+                    <b>
+
+                        BEING OUTDOORS AT A BARBEQUE- A GREAT WAY TO SPEND TIME FRIENDS AND FAMILY.
+                    </b>
+                </p>
+                <p>At La Casa we appreciate your taste for the good life and thirst for adventure.Indulge at the grill festival that's high on flavour and spirit.Choose from our sumptuous grilled fare created by our culinary experts.Bask in the mood of mellow woods,fountains,verdant greens or let the experience at the roof grill bar linger on forever.</p>            <a href="~/Home/About"><p class="pull-right" style="color:red">...READ MORE</p></a>
+
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-sm-4">
+                <a href="~/Home/Home_Delivery">
+
+                    <img src="~/images/home/lacasa2.jpg" alt="Alternate Text" style="width:89%" />
+                </a>
+            </div><div class="col-sm-4">
+                <a href="~/Home/Opening_Hours">
+                    <img src="~/images/home/11 by online news media (2).jpg" alt="Alternate Text" style="width:89%" />
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <br />
+                <br />
+                <a href="#aboutModal" data-toggle="modal" data-target="#myModal" class="booknow" style="color: rgba(51, 122, 183, 0)!important; ">
+
+
+                    <img src="~/images/home/book-now.png" alt="Alternate Text" style="width:70%" />
+                </a>
+
+            </div>
+
+
+        </div>
+
+        <div class="col-sm-3">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <a href="~/Home/Menu">
+
+                <img src="~/images/home/lacasa 7.png" alt="Alternate Text" style="width:100%" />
+            </a>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <br />
+
+
+
+        <div class="clearfix"></div>
+        <div class="col-sm-12">
+            <div class="carousel slide media-carousel" id="media">
+                <div class="carousel-inner">
+                    <div class="item  active">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a class="thumbnail" href="~/Home/Menu">
+                                    <img src="~/images/menu/menu veg starter.png" alt="lacasa" class="img-responsive" />
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="thumbnail" href="~/Home/Menu">
+                                    <img src="~/images/menu/menu non veg statter.jpg" alt="lacasa" class="img-responsive" />
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="thumbnail" href="~/Home/Menu">
+                                    <img src="~/images/menu/sandwiches.jpg" alt="lacasa" class="img-responsive" />
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="thumbnail" href="~/Home/Menu">
+                                    <img src="~/images/menu/burger.jpg" alt="lacasa" class="img-responsive" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a class="thumbnail" href="~/Home/Menu">
+                                    <img alt="" src="~/images/menu/pizza  ved.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="thumbnail" href="~/Home/Menu">
+                                    <img alt="" src="~/images/menu/biriyani.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="thumbnail" href="~/Home/Menu">
+                                    <img alt="" src="~/images/menu/chinese new.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="thumbnail" href="~/Home/Menu">
+                                    <img alt="" src="~/images/menu/british new.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#media" class="right carousel-control">›</a>
+            </div>
+
+
+
+
+
+            <style>
+                /* carousel */
+                .media-carousel {
+                    margin-bottom: 0;
+                    padding: 0 40px 30px 40px;
+                    margin-top: 30px;
+                }
+                    /* Previous button  */
+                    .media-carousel .carousel-control.left {
+                        left: -12px;
+                        background-image: none;
+                        background: none repeat scroll 0 0 #222222;
+                        border: 4px solid #FFFFFF;
+                        border-radius: 23px 23px 23px 23px;
+                        height: 40px;
+                        width: 40px;
+                        margin-top: 71px;
+                    }
+                    /* Next button  */
+                    .media-carousel .carousel-control.right {
+                        right: -12px !important;
+                        background-image: none;
+                        background: none repeat scroll 0 0 #222222;
+                        border: 4px solid #FFFFFF;
+                        border-radius: 23px 23px 23px 23px;
+                        height: 40px;
+                        width: 40px;
+                        margin-top: 71px;
+                    }
+                    /* Changes the position of the indicators */
+                    .media-carousel .carousel-indicators {
+                        right: 50%;
+                        top: auto;
+                        bottom: 0px;
+                        margin-right: -19px;
+                    }
+                        /* Changes the colour of the indicators */
+                        .media-carousel .carousel-indicators li {
+                            background: #c0c0c0;
+                        }
+
+                        .media-carousel .carousel-indicators .active {
+                            background: #333333;
+                        }
+
+                    .media-carousel img {
+                        width: 100%;
+                        /*height: 100px;*/
+                    }
+                /* End carousel */
+            </style>
+
+            <div class="col-sm-3 indeimg">
+                <a href="~/Home/Gallery">
+
+                    <img src="~/images/home/CMK_4902.jpg" alt="Alternate Text" style="width:100%" />
+                </a>
+            </div>
+
+            <div class="col-sm-3 indeimg">
+                <a href="~/Home/Gallery">
+
+                    <img src="~/images/home/IMG_1077.jpg" alt="Alternate Text" style="width:100%" />
+                </a>
+
+            </div>
+            <div class="col-sm-3 indeimg">
+                <a href="~/Home/Gallery">
+
+
+                    <img src="~/images/home/IMG_0923.jpg" alt="Alternate Text" style="width:100%" />
+                </a>
+            </div>
+
+            <div class="col-sm-3 indeimg">
+                <a href="~/Home/Gallery">
+
+                    <img src="~/images/home/CMK_4903.jpg" alt="Alternate Text" style="width:100%" />
+                </a>
+
+
+            </div>
+
+
+            <div class="col-sm-12">
+                <br />
+                <br />
+
+                <a href="~/Home/Gallery"><p class="pull-right" style="color:red">VIEW GALLERY</p></a>
+                <br />
+                <br />
+
+
+                <div class="clearfix"></div>
+                <p>At La Casa we appreciate your taste for the good life and thirst for adventure.Indulge at the grill festival that's high on flavour and spirit.Choose from our sumptuous grilled fare created by our culinary experts.Bask in the mood of mellow woods,fountains,verdant greens or let the experience at the roof grill bar linger on forever.At La Casa we appreciate your taste for the good life and thirst for adventure.Indulge at the grill festival that's high on flavour and spirit.Choose from our sumptuous grilled fare created by our culinary experts.</p>
+                <br />
+                <br />
+
+                <h3>features</h3>
+                <br />
+
+            </div>
+
+            <div class="col-sm-3 indeimg">
+                <a href="~/Home/Facilities">
+
+
+                    <img src="~/images/home/Dim-lighting-in-dining-room-300x225.jpg" alt="Alternate Text" style="width:100%" />
+                </a>
+            </div>
+
+            <div class="col-sm-3 indeimg">
+                <a href="~/Home/Facilities">
+
+
+                    <img src="~/images/home/babychair.jpg" alt="Alternate Text" style="width:100%" />
+                </a>
+
+            </div>
+            <div class="col-sm-3 indeimg">
+                <a href="~/Home/Facilities">
+
+
+                    <img src="~/images/home/park.jpg" alt="Alternate Text" style="width:100%" />
+                </a>
+
+            </div>
+
+            <div class="col-sm-3 indeimg">
+                <a href="~/Home/Facilities">
+
+                    <img src="~/images/home/la 4.png" alt="Alternate Text" style="width:100%" />
+                </a>
+
+            </div>
+
+
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style=" z-index: 11111; " aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    @*<center><h4 class="modal-title" id="myModalLabel">Cash on delivery</h4></center>*@
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-6 popupaddress">
+
+                        <br />
+                        <p class="popuplacasa">La Casa Restaurant</p>
+                        <p>
+                            Amrutha Engineering College Road
+                            <br />
+                            Off Sarjapur Road
+                            <br>
+                            Kasavanahalli<br>
+                            Near Lake Shore Homes<br />
+                            Bangalore<br />
+                            Karnataka:  560035<br>
+                        </p>
+                        <br>
+                        <p class="popuplacasa">
+                            080 4217 2469
+                        <p class="popuplacasa">
+
+                            +91 89513 51798
+                        </p>
+                        <p class="popuplacasa">
+                            +91 70225 67469
+                        </p>
+                        <br>
+
+
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .booknow:hover {
+        color: rgba(35, 82, 124, 0);
+        text-decoration: underline;
+    }
+</style>
+<script src="~/Scripts/pslider.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#media').carousel({
+            pause: true,
+            interval: false,
+        });
+    });</script>

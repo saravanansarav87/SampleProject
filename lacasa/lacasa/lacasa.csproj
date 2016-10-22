@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7F31423-D41F-4241-A66C-C5EFA854DFF1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>lacasa</RootNamespace>
+    <AssemblyName>lacasa</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SubmenuController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\book\bookblock.css" />
+    <Content Include="Content\book\calendar.css" />
+    <Content Include="Content\book\default.css" />
+    <Content Include="Content\book\demo2.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\gallery.css" />
+    <Content Include="Content\gallery\demo.css" />
+    <Content Include="Content\gallery\jquery.gridder.min.css" />
+    <Content Include="Content\slidepopup\reset.css" />
+    <Content Include="Content\slidepopup\style.css" />
+    <Content Include="Content\social.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\aboutlacasa.jpg" />
+    <Content Include="images\American\BaconWrapped.jpg" />
+    <Content Include="images\American\Cajun.jpg" />
+    <Content Include="images\American\CajunJambalayapork.jpg" />
+    <Content Include="images\American\Delmonico’s.jpg" />
+    <Content Include="images\American\Macaroni.jpg" />
+    <Content Include="images\American\PhiladelphiaCheeseSteak.jpg" />
+    <Content Include="images\Austrian\Wiener_Schnitzel.jpg" />
+    <Content Include="images\babychair.jpg" />
+    <Content Include="images\banner\about late casa.png" />
+    <Content Include="images\Bhutanese\Emma Datchi.jpg" />
+    <Content Include="images\Bhutanese\Pork Fing.jpg" />
+    <Content Include="images\british\Fish ‘n Chips.jpg" />
+    <Content Include="images\british\Grilled Pork Chops.jpg" />
+    <Content Include="images\british\Lancashire Hot Pot veg.jpg" />
+    <Content Include="images\british\lancashire-hotpotnonveg.jpg" />
+    <Content Include="images\british\Shepherd’s Pie.jpg" />
+    <Content Include="images\british\Steak Balmoral.jpg" />
+    <Content Include="images\british\Sunday Roast Beef.jpg" />
+    <Content Include="images\british\Sunday Roast Pork.jpg" />
+    <Content Include="images\candle light dinnerrrrrrr.jpg" />
+    <Content Include="images\candlelight.jpg" />
+    <Content Include="images\chinese\2012-07-31-vegetable-fried-rice-4-580.jpg" />
+    <Content Include="images\chinese\American Chop Suey chikn.jpg" />
+    <Content Include="images\chinese\american-chopsueyveg.jpg" />
+    <Content Include="images\chinese\chinese-sausage-and-chicken-rice.jpg" />
+    <Content Include="images\chinese\Chow Mein chickn.jpg" />
+    <Content Include="images\chinese\Chow Mein Egg.jpg" />
+    <Content Include="images\chinese\Chow Mein pork.jpg" />
+    <Content Include="images\chinese\Chow Mein shrimp.jpg" />
+    <Content Include="images\chinese\Chow Mein veg.jpg" />
+    <Content Include="images\chinese\egg-fried-rice-8.jpg" />
+    <Content Include="images\chinese\egg_chow_mein.png" />
+    <Content Include="images\chinese\Fried Rice chicken.jpg" />
+    <Content Include="images\chinese\Fried Rice mixed.jpg" />
+    <Content Include="images\chinese\Fried Rice pork.jpg" />
+    <Content Include="images\chinese\mixed_chowmein.jpg" />
+    <Content Include="images\chinese\schezwan-chicken-noodles chicken.jpg" />
+    <Content Include="images\chinese\schezwan-chicken-noodles chicken.png" />
+    <Content Include="images\chinese\ShrimpFriedRice3.png" />
+    <Content Include="images\chinese\Szechuan Fried RiceNoodles Pork.jpg" />
+    <Content Include="images\chinese\Szechuan Fried RiceNoodles shrimp.jpg" />
+    <Content Include="images\chinese\Szechuan Fried RiceNoodles veg.jpg" />
+    <Content Include="images\chinese\Szechuanmixed.jpg" />
+    <Content Include="images\chinese\szechuanstyle-pork-and-beans-with-egg-noodles-21137_l.jpeg" />
+    <Content Include="images\continental\Argentinian.jpg" />
+    <Content Include="images\continental\Char_Grilled.jpg" />
+    <Content Include="images\continental\Gamberoni.jpg" />
+    <Content Include="images\continental\GrilledChicken.jpg" />
+    <Content Include="images\continental\GrilledFish.jpg" />
+    <Content Include="images\continental\MexicanBasa.jpg" />
+    <Content Include="images\continental\Pork_Ribs.jpg" />
+    <Content Include="images\Dessert\blueberry-citrus-cake-1.jpg" />
+    <Content Include="images\Dessert\Brownie.jpeg" />
+    <Content Include="images\Dessert\Cheesecake.jpg" />
+    <Content Include="images\Dessert\Chocolate Fudge Cake.jpg" />
+    <Content Include="images\Dessert\Chocolate-Fudge-Sauce-5.jpg" />
+    <Content Include="images\Dessert\fudge-delight.jpg" />
+    <Content Include="images\footer.jpg" />
+    <Content Include="images\footlong\fingerchips.jpg" />
+    <Content Include="images\footlong\footerlongsnonveg.jpg" />
+    <Content Include="images\footlong\footerlongsveg.jpg" />
+    <Content Include="images\french\Beef-escalope-490.jpg" />
+    <Content Include="images\french\Chicken Steak au Poivre.jpg" />
+    <Content Include="images\french\Escalopechkn.jpg" />
+    <Content Include="images\french\Escalopefish.jpg" />
+    <Content Include="images\french\Filet Chateaubriand .jpg" />
+    <Content Include="images\french\Filet Mignon with Blue Cheese Butter.jpg" />
+    <Content Include="images\french\FiletSteak.jpg" />
+    <Content Include="images\french\HungarianGoulash Stew.jpg" />
+    <Content Include="images\french\Mozzarella.jpg" />
+    <Content Include="images\fromgrill\BBQ-Chicken.jpeg" />
+    <Content Include="images\fromgrill\grilled  picatta beef.jpg" />
+    <Content Include="images\fromgrill\grilled fish in lemon butter sauce.jpg" />
+    <Content Include="images\fromgrill\grilled fish mustard sauce.jpg" />
+    <Content Include="images\fromgrill\grilled pork chops in orange sauce.jpg" />
+    <Content Include="images\fromgrill\grilled pork ribs in bbq sauce.JPG" />
+    <Content Include="images\fromgrill\grilled-chicken-thighs-sl-x.jpg" />
+    <Content Include="images\fromgrill\Grilled-Gaucho-Steak-with-Chimichurri.jpg" />
+    <Content Include="images\fromgrill\mexican basa.jpg" />
+    <Content Include="images\fromgrill\periperi1_550.jpg" />
+    <Content Include="images\Gallery\img %281%29.jpg" />
+    <Content Include="images\Gallery\img %2810%29.jpg" />
+    <Content Include="images\Gallery\img %2811%29.jpg" />
+    <Content Include="images\Gallery\img %2812%29.jpg" />
+    <Content Include="images\Gallery\img %2813%29.jpg" />
+    <Content Include="images\Gallery\img %2814%29.jpg" />
+    <Content Include="images\Gallery\img %2815%29.jpg" />
+    <Content Include="images\Gallery\img %2816%29.jpg" />
+    <Content Include="images\Gallery\img %2817%29.jpg" />
+    <Content Include="images\Gallery\img %2818%29.jpg" />
+    <Content Include="images\Gallery\img %282%29.jpg" />
+    <Content Include="images\Gallery\img %2820%29.jpg" />
+    <Content Include="images\Gallery\img %2821%29.jpg" />
+    <Content Include="images\Gallery\img %2822%29.jpg" />
+    <Content Include="images\Gallery\img %283%29.jpg" />
+    <Content Include="images\Gallery\img %284%29.jpg" />
+    <Content Include="images\Gallery\img %285%29.jpg" />
+    <Content Include="images\Gallery\img %286%29.jpg" />
+    <Content Include="images\Gallery\img %287%29.jpg" />
+    <Content Include="images\Gallery\img %288%29.jpg" />
+    <Content Include="images\Gallery\img %289%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %281%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2810%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2811%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2812%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2813%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2814%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2815%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2816%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2817%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2818%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2819%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %282%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2820%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2821%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2822%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2823%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2824%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2825%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2826%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2827%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2828%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2829%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %283%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2830%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2831%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2832%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2833%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2834%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2835%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2836%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2837%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2838%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2839%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %284%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2840%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2841%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2842%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2843%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2844%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2845%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2846%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2847%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2848%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2849%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %285%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2850%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2851%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2852%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2853%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2854%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2855%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2856%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2857%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2858%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2859%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %286%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2860%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2861%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2862%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2863%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2864%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2865%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2866%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2867%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2868%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2869%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %287%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2870%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2871%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2872%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2873%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2874%29.JPG" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %2875%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %288%29.jpg" />
+    <Content Include="images\Gallery\La Casa Restaurant by onlinenewsmedia-in  %289%29.jpg" />
+    <Content Include="images\home delivery pics.jpg" />
+    <Content Include="images\home\11 by online news media %282%29.jpg" />
+    <Content Include="images\home\babychair.jpg" />
+    <Content Include="images\home\banner.jpg" />
+    <Content Include="images\home\book-now.png" />
+    <Content Include="images\home\burgereating.png" />
+    <Content Include="images\home\candlelight.jpg" />
+    <Content Include="images\home\CMK_4902.jpg" />
+    <Content Include="images\home\CMK_4903.jpg" />
+    <Content Include="images\home\Dim-lighting-in-dining-room-300x225.jpg" />
+    <Content Include="images\home\IMG_0923.jpg" />
+    <Content Include="images\home\IMG_1077.jpg" />
+    <Content Include="images\home\la 4.png" />
+    <Content Include="images\home\la casa 3.png" />
+    <Content Include="images\home\la3.png" />
+    <Content Include="images\home\lacasa 7.png" />
+    <Content Include="images\home\lacasa1.png" />
+    <Content Include="images\home\lacasa10.png" />
+    <Content Include="images\home\lacasa2.jpg" />
+    <Content Include="images\home\lacasa9.png" />
+    <Content Include="images\home\lacasabar.jpg" />
+    <Content Include="images\home\lacasadoorstep.png" />
+    <Content Include="images\home\lacasainside.png" />
+    <Content Include="images\home\lacasatreat.jpg" />
+    <Content Include="images\home\menubg.jpg" />
+    <Content Include="images\home\menubg2.jpg" />
+    <Content Include="images\home\menuribbon.png" />
+    <Content Include="images\home\onm-logo-small-.png" />
+    <Content Include="images\home\park.jpg" />
+    <Content Include="images\home\slidersmall1.jpg" />
+    <Content Include="images\home\slidersmall2.jpg" />
+    <Content Include="images\home\slidersmall3.jpg" />
+    <Content Include="images\Hungarian\Hungarian Goulash Stew.jpg" />
+    <Content Include="images\indiannonvegetarian\Bhuna Gosht.jpg" />
+    <Content Include="images\indiannonvegetarian\Butter Chicken.jpg" />
+    <Content Include="images\indiannonvegetarian\Chicken Mughlai.jpg" />
+    <Content Include="images\indiannonvegetarian\Kadai Chicken.jpg" />
+    <Content Include="images\indiannonvegetarian\Keema Masala.jpg" />
+    <Content Include="images\indiannonvegetarian\Mangalore Fish Curry.jpg" />
+    <Content Include="images\indiannonvegetarian\mangalore-chicken-curry.jpg" />
+    <Content Include="images\indiannonvegetarian\Methi Chicken.jpg" />
+    <Content Include="images\indiannonvegetarian\Murgh Do-Piyaza.jpg" />
+    <Content Include="images\indiannonvegetarian\Mutton Kofta Curry.jpg" />
+    <Content Include="images\indiannonvegetarian\Mutton Pepper Fry.jpg" />
+    <Content Include="images\indiannonvegetarian\Mutton Rogan Josh.jpg" />
+    <Content Include="images\indiannonvegetarian\Nargisi Kofta.jpg" />
+    <Content Include="images\indiannonvegetarian\Palak Chicken.JPG" />
+    <Content Include="images\indiannonvegetarian\Palak Chicken1.jpg" />
+    <Content Include="images\indiannonvegetarian\Pandi Curry.jpg" />
+    <Content Include="images\indiannonvegetarian\Prawn Curryy.jpg" />
+    <Content Include="images\indianvegetarian\aloo gobi.jpg" />
+    <Content Include="images\indianvegetarian\dal-makhani.goldenpunjabjpg-1.jpg" />
+    <Content Include="images\indianvegetarian\eggMasala 151.JPG" />
+    <Content Include="images\indianvegetarian\Greek-Yogurt-1.jpg" />
+    <Content Include="images\indianvegetarian\Kadai Paneer.JPG" />
+    <Content Include="images\indianvegetarian\Mixed Dal.jpg" />
+    <Content Include="images\indianvegetarian\Mixed Vegetable Curry.png" />
+    <Content Include="images\indianvegetarian\Mixed_Kadai_Vegetable_Sabzi_North_Indian_Recipe-20.jpg" />
+    <Content Include="images\indianvegetarian\mushroom-butter-masala.png" />
+    <Content Include="images\indianvegetarian\Palak Paneer.jpg" />
+    <Content Include="images\indianvegetarian\Raitha.jpg" />
+    <Content Include="images\Italian\Alfredononveg.jpg" />
+    <Content Include="images\Italian\Alfredoveg.jpg" />
+    <Content Include="images\Italian\Carbonara.jpg" />
+    <Content Include="images\Italian\CreamChicken.jpg" />
+    <Content Include="images\Italian\FusionPennechichen.jpg" />
+    <Content Include="images\Italian\FusionPenneveg.jpg" />
+    <Content Include="images\Italian\home delivery pics.jpg" />
+    <Content Include="images\Italian\Lasagne.jpg" />
+    <Content Include="images\Italian\Lasagnechichen.jpg" />
+    <Content Include="images\Italian\Lasagnemutton.jpg" />
+    <Content Include="images\Italian\Lasagneveg.jpg" />
+    <Content Include="images\Italian\PennePesto.jpg" />
+    <Content Include="images\Italian\PennPestochick.jpg" />
+    <Content Include="images\Italian\Peperonata.jpg" />
+    <Content Include="images\Italian\Risottochicken.jpg" />
+    <Content Include="images\Italian\RisottoMushroom.jpg" />
+    <Content Include="images\Italian\ShrimpDiablo.jpg" />
+    <Content Include="images\Italian\Spaghetti Bolognese.jpg" />
+    <Content Include="images\Italian\SpinachCorn.jpg" />
+    <Content Include="images\Italian\SpinachLasagnemutton.jpg" />
+    <Content Include="images\Italian\SpinachLasagneveg.jpg" />
+    <Content Include="images\Italian\Spinacnchicken.jpg" />
+    <Content Include="images\Italian\ViaVenito.jpg" />
+    <Content Include="images\korean\Bulgogi  Beef.jpg" />
+    <Content Include="images\korean\Bulgogi chicken.jpg" />
+    <Content Include="images\korean\Spicy Pork Bulgogi.jpg" />
+    <Content Include="images\la 4.png" />
+    <Content Include="images\la casa 3.png" />
+    <Content Include="images\la casa opening hours.jpg" />
+    <Content Include="images\la pizzaria remake.jpg" />
+    <Content Include="images\la3.png" />
+    <Content Include="images\lacasa 7.png" />
+    <Content Include="images\lacasa1.png" />
+    <Content Include="images\lacasa10.png" />
+    <Content Include="images\lacasa2.jpg" />
+    <Content Include="images\lacasa9.png" />
+    <Content Include="images\lacasamaindoor.png" />
+    <Content Include="images\Lebanese\Kibbeh.jpg" />
+    <Content Include="images\local\Russel Market Vegetable Steak %28sizzler%29.png" />
+    <Content Include="images\logolacasa.png" />
+    <Content Include="images\maincoursenonveg\Beef in Szechuan Sauce.jpg" />
+    <Content Include="images\maincoursenonveg\Chicken  in Szechuan Sauce.jpg" />
+    <Content Include="images\maincoursenonveg\Chinese Roast Pork.jpg" />
+    <Content Include="images\maincoursenonveg\Five Spice Beef.jpg" />
+    <Content Include="images\maincoursenonveg\Five Spice Chicken.jpg" />
+    <Content Include="images\maincoursenonveg\Five Spice Pork.jpg" />
+    <Content Include="images\maincoursenonveg\Hunan Pork.jpg" />
+    <Content Include="images\maincoursenonveg\HunanBeef.jpg" />
+    <Content Include="images\maincoursenonveg\hunanch chicken.jpg" />
+    <Content Include="images\maincoursenonveg\Kung Pao  Chicken.jpg" />
+    <Content Include="images\maincoursenonveg\kung-pao-Beef .jpg" />
+    <Content Include="images\maincoursenonveg\Kung-Pao-Pork-Recipe1.jpg" />
+    <Content Include="images\maincoursenonveg\Lemon Chicken.jpg" />
+    <Content Include="images\maincoursenonveg\Pork in Szechuan Sauce.jpg" />
+    <Content Include="images\maincourseveg\Five Spice Vegetables.jpg" />
+    <Content Include="images\maincourseveg\Stir Fried Bok Choy.jpg" />
+    <Content Include="images\maincourseveg\Sweet ‘n Sour Veg.jpg" />
+    <Content Include="images\maincourseveg\Vegetables in Szechuan Sauce.jpg" />
+    <Content Include="images\menu\american55.jpg" />
+    <Content Include="images\menu\austrian new.jpg" />
+    <Content Include="images\menu\bbq.jpg" />
+    <Content Include="images\menu\bergerchicken.jpg" />
+    <Content Include="images\menu\Bhutanese.jpg" />
+    <Content Include="images\menu\Bhutanese\Bhutanese.jpg" />
+    <Content Include="images\menu\Bhutanese\Emma Datchi.jpg" />
+    <Content Include="images\menu\Bhutanese\Pork Fing.jpg" />
+    <Content Include="images\menu\biriyani.jpg" />
+    <Content Include="images\menu\british new.jpg" />
+    <Content Include="images\menu\burger.jpg" />
+    <Content Include="images\menu\child menu.jpg" />
+    <Content Include="images\menu\chinese new.jpg" />
+    <Content Include="images\menu\continentaaal new.jpg" />
+    <Content Include="images\menu\dessert5.jpg" />
+    <Content Include="images\menu\FINGERCHIP.jpg" />
+    <Content Include="images\menu\FOOT_LONG.jpg" />
+    <Content Include="images\menu\french new.jpg" />
+    <Content Include="images\menu\grilled-chickensandwich.jpg" />
+    <Content Include="images\menu\hungariarn new.jpg" />
+    <Content Include="images\menu\indian non veg.jpg" />
+    <Content Include="images\menu\indian veg.jpg" />
+    <Content Include="images\menu\juice new.jpg" />
+    <Content Include="images\menu\korean new.jpg" />
+    <Content Include="images\menu\lebanees ved.jpg" />
+    <Content Include="images\menu\llocal.jpg" />
+    <Content Include="images\menu\main course non veg.jpg" />
+    <Content Include="images\menu\main course veg.jpg" />
+    <Content Include="images\menu\menu italian.jpg" />
+    <Content Include="images\menu\menu non veg statter.jpg" />
+    <Content Include="images\menu\menu salad.jpg" />
+    <Content Include="images\menu\menu soup.jpg" />
+    <Content Include="images\menu\menu spanish.jpg" />
+    <Content Include="images\menu\menu veg starter.png" />
+    <Content Include="images\menu\peruvian new.jpg" />
+    <Content Include="images\menu\pizza  ved.jpg" />
+    <Content Include="images\menu\pizza2.jpg" />
+    <Content Include="images\menu\rice and curry.jpg" />
+    <Content Include="images\menu\roti cappathi.jpg" />
+    <Content Include="images\menu\sandwiches.jpg" />
+    <Content Include="images\menu\south east asian.jpg" />
+    <Content Include="images\nonvegberger\chefs-burger.jpg" />
+    <Content Include="images\nonvegberger\Chicken Burgers .jpg" />
+    <Content Include="images\nonvegberger\tandoori-chicken-burger-with-mango-chutney-14512_l.jpeg" />
+    <Content Include="images\nonvegsandwiches\chicken_club_sandwich.jpg" />
+    <Content Include="images\nonvegsandwiches\EGG SANDWICHES.jpg" />
+    <Content Include="images\nonvegsandwiches\GRILLED BACON SANDWICHES.jpg" />
+    <Content Include="images\nonvegsandwiches\grilled-chicken-sandwich-l.jpg" />
+    <Content Include="images\nonvegsandwiches\Smokestack BBQ Sandwich_MG_2882.jpg" />
+    <Content Include="images\nonveg\Achari Tikka.png" />
+    <Content Include="images\nonveg\Bacon Wrapped Chicken.png" />
+    <Content Include="images\nonveg\Bacon Wrapped Prawns.png" />
+    <Content Include="images\nonveg\beafroast.png" />
+    <Content Include="images\nonveg\Chicken Gold Coin.png" />
+    <Content Include="images\nonveg\Chicken Tikka.png" />
+    <Content Include="images\nonveg\Chicken with Green and Red Pepper in Chilli Basil.png" />
+    <Content Include="images\nonveg\chickentandoori.png" />
+    <Content Include="images\nonveg\Chilli Chicken.png" />
+    <Content Include="images\nonveg\Chilli Fish.png" />
+    <Content Include="images\nonveg\Chilli Szechuan Prawns.png" />
+    <Content Include="images\nonveg\chillipork.png" />
+    <Content Include="images\nonveg\coorgpork.png" />
+    <Content Include="images\nonveg\Drums of Heaven.png" />
+    <Content Include="images\nonveg\Fish Fingers.png" />
+    <Content Include="images\nonveg\Fish Tikka.png" />
+    <Content Include="images\nonveg\Gai Tod.png" />
+    <Content Include="images\nonveg\Grilled Bacon Wrapped Sausages.png" />
+    <Content Include="images\nonveg\Grilled Bacon.png" />
+    <Content Include="images\nonveg\Grilled BBQ Chicken.png" />
+    <Content Include="images\nonveg\Grilled Beef Picatta.png" />
+    <Content Include="images\nonveg\Grilled Chicken in Peri Peri Sauce.png" />
+    <Content Include="images\nonveg\Grilled Fish in Mustard Sauce.png" />
+    <Content Include="images\nonveg\Grilled Pepper Chicken.jpg" />
+    <Content Include="images\nonveg\Grilled Pepper Chicken.png" />
+    <Content Include="images\nonveg\Grilled Sausages chicken.png" />
+    <Content Include="images\nonveg\Grilled Sausages pork.png" />
+    <Content Include="images\nonveg\haratawapaneer.png" />
+    <Content Include="images\nonveg\hot pepper chicken.png" />
+    <Content Include="images\nonveg\kalmi kabab.png" />
+    <Content Include="images\nonveg\Karwari Prawns.png" />
+    <Content Include="images\nonveg\Mangalore pork.png" />
+    <Content Include="images\nonveg\mangalorepork.png" />
+    <Content Include="images\nonveg\Mexican Lollipop.png" />
+    <Content Include="images\nonveg\murg malai kabab.png" />
+    <Content Include="images\nonveg\murgh banjara kabab.png" />
+    <Content Include="images\nonveg\omg-burger.png" />
+    <Content Include="images\nonveg\Paneer Tikka.png" />
+    <Content Include="images\nonveg\Pesto Grilled Prawn.png" />
+    <Content Include="images\nonveg\PORK Sausage Croquettes.png" />
+    <Content Include="images\nonveg\Rampuri Meat Balls.png" />
+    <Content Include="images\nonveg\Roast Pork.png" />
+    <Content Include="images\nonveg\Scotch Eggsnonveg.png" />
+    <Content Include="images\nonveg\seek kababa.png" />
+    <Content Include="images\nonveg\Seekh Kabab.png" />
+    <Content Include="images\nonveg\Steamed Chicken Momosnonveg.png" />
+    <Content Include="images\nonveg\surmali.png" />
+    <Content Include="images\nonveg\Tandoori chicken full.png" />
+    <Content Include="images\nonveg\Tandoori Non Veg Platter.png" />
+    <Content Include="images\nonveg\Tandoori Seafood Platter.png" />
+    <Content Include="images\nonveg\Tandoori.png" />
+    <Content Include="images\nonveg\tangikabab.png" />
+    <Content Include="images\order-homepage.jpg" />
+    <Content Include="images\peruvian\aji-de-gallina-3 %281%29.jpg" />
+    <Content Include="images\pizza_nonveg\beastly.jpg" />
+    <Content Include="images\pizza_nonveg\Don Benito.png" />
+    <Content Include="images\pizza_nonveg\Don Camillo.jpg" />
+    <Content Include="images\pizza_nonveg\garlicpizza.jpg" />
+    <Content Include="images\pizza_nonveg\jigsaw.png" />
+    <Content Include="images\pizza_nonveg\keema-pizza.jpg" />
+    <Content Include="images\pizza_nonveg\lacasafest.jpg" />
+    <Content Include="images\pizza_nonveg\methipizza.jpg" />
+    <Content Include="images\pizza_nonveg\Mexicali.png" />
+    <Content Include="images\pizza_nonveg\paparazzi-pizza-caffe.jpg" />
+    <Content Include="images\pizza_nonveg\sagpizza.jpg" />
+    <Content Include="images\pizza_veg\chillipaneerpizza.jpg" />
+    <Content Include="images\pizza_veg\Clementina.jpg" />
+    <Content Include="images\pizza_veg\Fresh Veggie Special.png" />
+    <Content Include="images\pizza_veg\hari-mirch-pineapple-pizza.jpg" />
+    <Content Include="images\pizza_veg\Hawaiian Fantasy.png" />
+    <Content Include="images\pizza_veg\hawaiian.jpg" />
+    <Content Include="images\pizza_veg\kichenpizza.jpg" />
+    <Content Include="images\pizza_veg\Margherita.png" />
+    <Content Include="images\pizza_veg\pancap.jpg" />
+    <Content Include="images\pizza_veg\Paneer-PizzaPalak.jpg" />
+    <Content Include="images\pizza_veg\side-pizza-high-five-middle.png" />
+    <Content Include="images\plate last.jpg" />
+    <Content Include="images\post-it-opening-hours-green.png" />
+    <Content Include="images\ribbon1.png" />
+    <Content Include="images\ribbon2.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="images\nonveg\Grilled Pepper Chicken.pxr" />
+    <None Include="Properties\PublishProfiles\lacasa.pubxml" />
+    <None Include="Scripts\jquery-2.2.3.intellisense.js" />
+    <Content Include="images\Rice\Chicken Biriyani.jpg" />
+    <Content Include="images\Rice\Curd Rice.jpg" />
+    <Content Include="images\Rice\Egg Biriyani.jpg" />
+    <Content Include="images\Rice\ghee-rice-recipe.jpg" />
+    <Content Include="images\Rice\Jeera-Rice-Recipe.jpg" />
+    <Content Include="images\Rice\Kashmiri Pulav.jpg" />
+    <Content Include="images\Rice\Mutton Biriyani.jpg" />
+    <Content Include="images\Rice\Steamed Rice.jpg" />
+    <Content Include="images\Rice\Veg Biriyani.jpg" />
+    <Content Include="images\Rice\vegetable-pulav-recipe.jpg" />
+    <Content Include="images\Roti\Ajwain Paratha.jpg" />
+    <Content Include="images\Roti\Butter Naan.jpg" />
+    <Content Include="images\Roti\Cheese Garlic Naan.jpg" />
+    <Content Include="images\Roti\Garlic Butter Naan.jpg" />
+    <Content Include="images\Roti\Jaipuri Naan.jpg" />
+    <Content Include="images\Roti\Kulchachole.jpg" />
+    <Content Include="images\Roti\Peshawari-Naan00019.jpg" />
+    <Content Include="images\Roti\Stuffed Kulcha.jpg" />
+    <Content Include="images\salads\Green Salad.png" />
+    <Content Include="images\salads\Hawaiian  Salad.png" />
+    <Content Include="images\salads\Thousand Island Salad.png" />
+    <Content Include="images\salads\Tossed Salad with Mixed Greens.png" />
+    <Content Include="images\soups\Borscht nonveg.png" />
+    <Content Include="images\soups\Borscht.png" />
+    <Content Include="images\soups\Chicken Clear Soup.png" />
+    <Content Include="images\soups\Cream of Chicken.png" />
+    <Content Include="images\soups\Cream of Mushroom.png" />
+    <Content Include="images\soups\Hot and Sour Soupnonveg.png" />
+    <Content Include="images\soups\Hot and Sour Soupveg.jpg" />
+    <Content Include="images\soups\Mean Manchow chicken.png" />
+    <Content Include="images\soups\Mean Manchow Veg.png" />
+    <Content Include="images\soups\Mexican Bisquenonveg.png" />
+    <Content Include="images\soups\Mexican Bisqueveg.png" />
+    <Content Include="images\soups\Sweet Corn Soup nonveg.png" />
+    <Content Include="images\soups\Sweet Corn Soup veg.png" />
+    <Content Include="images\soups\Zuppa Toscana.png" />
+    <Content Include="images\southeast\KAENG KEOW WAHN GOONG PRAWAN OR CHICKEN.jpg" />
+    <Content Include="images\southeast\KAENG KEOW WAHN GOONG vegtarian.jpg" />
+    <Content Include="images\southeast\Khao Pahd Nam Prik Pow Je  egg.jpg" />
+    <Content Include="images\southeast\Khao Pahd Nam Prik Pow Je chicken.jpg" />
+    <Content Include="images\southeast\Khao Pahd Nam Prik Pow Je veg.jpg" />
+    <Content Include="images\southeast\Khau_Swe_foodfood.jpg" />
+    <Content Include="images\southeast\Khow Swe veg.jpg" />
+    <Content Include="images\southeast\Malaysian Garlic Noodles nonveg.jpg" />
+    <Content Include="images\southeast\Malaysian Garlic Noodles veg.jpg" />
+    <Content Include="images\southeast\Nasi Mee Goreng – From chicken.jpg" />
+    <Content Include="images\southeast\Nasi Mee Goreng – From.jpg" />
+    <Content Include="images\southeast\Pad Thai Noodle.png" />
+    <Content Include="images\southeast\Pad Thai Noodles chiken.jpg" />
+    <Content Include="images\southeast\Thai Red Curry chicken.jpg" />
+    <Content Include="images\southeast\Thai-Red-Curry-with-Vegetables-and-Tofu-CloseUp.jpg" />
+    <Content Include="images\Spanish\chilli-con-carne-with-popping-971075l1.jpg" />
+    <Content Include="images\Spanish\PistoManchego.jpg" />
+    <Content Include="images\Spanish\PistoManchegoegg.jpg" />
+    <Content Include="images\Spanish\SpanishOmelette.jpg" />
+    <Content Include="images\vegberger\Mustard-Glazed-Mushroom-Burger.jpg" />
+    <Content Include="images\vegberger\PANEERBURGER.png" />
+    <Content Include="images\vegberger\VEGBURGER.jpg" />
+    <Content Include="images\vegsandwiches\10354-hawaiian-bowl-sandwich.jpg" />
+    <Content Include="images\vegsandwiches\VEG CLUB SANDWICHES.jpg" />
+    <Content Include="images\vegsandwiches\veg-sandwitch.jpg" />
+    <Content Include="images\veg\Baby Corn Golden Fry.png" />
+    <Content Include="images\veg\Bharwan Aloo.png" />
+    <Content Include="images\veg\Cheese Masala Omelette.png" />
+    <Content Include="images\veg\Chiili Cheese Toast.png" />
+    <Content Include="images\veg\FauladiKabab.png" />
+    <Content Include="images\veg\French Fries.png" />
+    <Content Include="images\veg\Green Peas Pepper fry.png" />
+    <Content Include="images\veg\Grilled Paneer Shashlik.png" />
+    <Content Include="images\veg\Grilled Veg Platter.png" />
+    <Content Include="images\veg\haratawapaneer.png" />
+    <Content Include="images\veg\Hot Pepper Paner.png" />
+    <Content Include="images\veg\momos.png" />
+    <Content Include="images\veg\nunnyaloo.png" />
+    <Content Include="images\veg\omg-burger.png" />
+    <Content Include="images\veg\Paneer Tikka.png" />
+    <Content Include="images\veg\Potato Croquettes.png" />
+    <Content Include="images\veg\scotch-eggs.png" />
+    <Content Include="images\veg\Spicy Herb Roasted Potatoes.png" />
+    <Content Include="images\veg\Tandoori Mushroom.png" />
+    <Content Include="images\veg\Tandoori Stuffed Broccoli.png" />
+    <Content Include="images\veg\Tandoori Veg Platter.png" />
+    <Content Include="images\veg\Veg Seekh Kabab.png" />
+    <Content Include="images\veg\veggoldcoin.png" />
+    <Content Include="Scripts\book\jquery.bookblock.js" />
+    <Content Include="Scripts\book\jquerypp.custom.js" />
+    <Content Include="Scripts\book\modernizr.custom.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\dsssidemenu\jquery-latest.min.js" />
+    <Content Include="Scripts\dsssidemenu\script.js" />
+    <Content Include="Scripts\gallery.js" />
+    <Content Include="Scripts\gallery\jquery.gridder.js" />
+    <Content Include="Scripts\jquery-2.2.3.js" />
+    <Content Include="Scripts\jquery-2.2.3.min.js" />
+    <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\jquery-2.1.1.js" />
+    <Content Include="Scripts\js\main.js" />
+    <Content Include="Scripts\js\modernizr.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\View.cshtml" />
+    <Content Include="Views\Home\Contact_Us.cshtml" />
+    <Content Include="Views\Home\Menu.cshtml" />
+    <Content Include="Views\Home\Home_Delivery.cshtml" />
+    <Content Include="Views\Home\Opening_Hours.cshtml" />
+    <Content Include="Views\Home\Facilities.cshtml" />
+    <Content Include="Views\Home\Lacasa_Special.cshtml" />
+    <Content Include="Views\Home\Book_Menu.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\Submenu.cshtml" />
+    <Content Include="Views\Submenu\Vegetarian.cshtml" />
+    <Content Include="Views\Submenu\Non_Vegetarian.cshtml" />
+    <Content Include="Views\Submenu\Salads.cshtml" />
+    <Content Include="Views\Submenu\Soups.cshtml" />
+    <Content Include="Views\Submenu\Pizza_Veg.cshtml" />
+    <Content Include="Views\Submenu\Pizza_Nonveg.cshtml" />
+    <Content Include="Views\Submenu\British.cshtml" />
+    <Content Include="Views\Submenu\Italian.cshtml" />
+    <Content Include="Views\Submenu\Spanish.cshtml" />
+    <Content Include="Views\Submenu\Lebanese.cshtml" />
+    <Content Include="Views\Submenu\American.cshtml" />
+    <Content Include="Views\Submenu\Continental.cshtml" />
+    <Content Include="Views\Submenu\Local.cshtml" />
+    <Content Include="Views\Submenu\French.cshtml" />
+    <Content Include="Scripts\js\.DS_Store" />
+    <Content Include="Views\Submenu\Hungarian.cshtml" />
+    <Content Include="Views\Submenu\Austrian.cshtml" />
+    <Content Include="Views\Submenu\South_East_Asian.cshtml" />
+    <Content Include="Views\Submenu\Peruvian.cshtml" />
+    <Content Include="Views\Submenu\Korean.cshtml" />
+    <Content Include="Views\Submenu\Bhutanese.cshtml" />
+    <Content Include="Views\Submenu\Chinese.cshtml" />
+    <Content Include="Views\Submenu\Maincourse_Vegetarian.cshtml" />
+    <Content Include="Views\Submenu\Maincourse_Nonvegetarian.cshtml" />
+    <Content Include="Views\Submenu\Indian_Vegetarian.cshtml" />
+    <Content Include="Views\Submenu\Indian_Nonvegetarian.cshtml" />
+    <Content Include="Views\Submenu\Rice.cshtml" />
+    <Content Include="Views\Submenu\Rotis.cshtml" />
+    <Content Include="Views\Submenu\Desserts.cshtml" />
+    <Content Include="Views\Submenu\Biriyani.cshtml" />
+    <Content Include="Views\Submenu\Veg_Sandwiches.cshtml" />
+    <Content Include="Views\Submenu\NonVeg_Sandwiches.cshtml" />
+    <Content Include="Views\Submenu\Veg_Berger.cshtml" />
+    <Content Include="Views\Submenu\NonVeg_Berger.cshtml" />
+    <Content Include="Views\Submenu\Foot_Longs.cshtml" />
+    <Content Include="Views\Submenu\Finger_Chips.cshtml" />
+    <Content Include="Views\Submenu\From_the_Grill.cshtml" />
+    <Content Include="Views\Home\PrivacyPolicy.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="images\pizza\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50017</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50017/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - LA CASA restaurant</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @* slidepopup *@
+    <link rel="stylesheet" href="~/Content/slidepopup/style.css"> <!-- Resource style -->
+    <script src="~/Scripts/js/jquery-2.1.1.js"></script>
+    <link rel="shortcut icon" href="~/images/logolacasa.png">
+
+    <script src="~/Scripts/js/main.js"></script> <!-- Resource jQuery -->
+    @* slidepopup *@
+</head>
+<body style="background: linear-gradient(180deg,#0F1217 -51%,#101116 154%);">
+    <div class="upperbg"></div>
+    <div class="navbar navbar-inverse">
+        <div class="container menu">
+
+            <div id="menuhalf">
+                <div class="navbar-header">
+                    <center>
+                        <div class="col-sm-2" style="width:20%;">
+                            <a href="~/Home/Index">
+                                <img src="~/Images/logolacasa.png" alt="Alternate Text" class="img-responsive" style="position: absolute;" />
+                            </a>
+                        </div>
+                    </center>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Menu", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+             </div>
+            <div id="menulid">
+                <div class="navbar-collapse collapse" style="background: linear-gradient(180deg,#B34212 -69%,rgb(160, 56, 14) 30px );">
+                    <ul class="nav navbar-nav" style="width:40%">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("facilities", "Facilities", "Home")</li>
+
+                        <li>@Html.ActionLink("opening hours", "Opening_Hours", "Home")</li>
+
+                    </ul>
+                    <center>
+                        <div class="col-sm-2" style="width:20%;margin-top: -14px;">
+                            <a href="~/Home/Index">
+                                <img src="~/Images/logolacasa.png" alt="Alternate Text" class="img-responsive" style="    position: absolute;" />
+                            </a>
+                        </div>
+                    </center>
+                    @Html.Partial("_LoginPartial")
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <main class="cd-main-content" style="position: fixed; z-index: 111111;    left: 88%;">
+        <ul style="list-style-type: none;">
+            <li style="height: 69px;">
+                <a id="01" href="#1" class="cd-btn">HOME DELIVERY</a>
+            </li>
+
+
+
+            @*<li> <a href="#0" class="cd-btn">KEEP IN TOUCH</a></li>*@
+        </ul>
+
+
+        <!-- your content here -->
+    </main>
+
+    <div class="cd-panel from-right" id="1" style=" Z-INDEX: 9999999999999999999;">
+        <center>
+            @*<header class="cd-panel-header" style="z-index: 1111; color: black;">
+                   CONTACT US
+                </header>*@
+        </center>
+        <div class="cd-panel-container" style="HEIGHT: 500px;BACKGROUND-COLOR: #fffefc;">
+            <div class=" cd-panel-content ">
+                <div class="col-sm-6 popupaddress">
+
+                    <br />
+                    <p class="popuplacasa">La Casa Restaurant</p>
+                    <p>
+                        Amrutha Engineering College Road
+                        <br />
+                        Off Sarjapur Road
+                        <br>
+                        Kasavanahalli<br>
+                        Near Lake Shore Homes<br />
+                        Bangalore<br />
+                        Karnataka:  560035<br>
+                    </p>
+                    <br>
+                    <p class="popuplacasa">
+                        +91 80 4217 2469
+                    <p class="popuplacasa">
+                        +91 70 2256 7469
+                    </p>
+
+
+                    <br />
+                    <p class="popuplacasa">
+                        www.lacasarestaurant.in
+                    </p>
+                    <br>
+
+
+
+                </div>
+
+            </div> <!-- cd-panel-content -->
+        </div> <!-- cd-panel-container -->
+    </div>
+
+
+
+    <div class="">
+        <div class="body-content ">
+            @RenderBody()
+
+
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="footer img-responsive" style=" top:300px;  position: relative; ">
+        <br /><br /><br /><br /><br /><br />
+        <div class="container">
+            <div class="col-sm-12" style="background-color: rgba(255, 255, 255, 0.32);">
+                <div class="col-sm-3">
+                    <h3>INFORMATION</h3>
+                    <ul>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About Us", "About", "Home")</li>
+
+                        <li>@Html.ActionLink("Opening hours", "Opening_Hours", "Home")</li>
+                        <li>@Html.ActionLink("menu", "Menu", "Home")</li>
+                        <li>@Html.ActionLink("La Casa Special ", "Lacasa_Special", "Home")</li>
+                        <li>@Html.ActionLink("facilities", "Facilities", "Home")</li>
+                        <li>@Html.ActionLink("home delivery", "Home_Delivery", "Home")</li>
+                        <li>@Html.ActionLink("Online Payment T & C", "PrivacyPolicy", "Home")</li>
+
+                        <li>@Html.ActionLink("Contact", "Contact_us", "Home")</li>
+
+
+
+
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3 style="color:red">LACASA</h3>
+                    <ul>
+
+
+                        <li>Amrutha Engineering College Road</li>
+
+                        <li>Off Sarjapur Road</li>
+
+                        <li>Kasavanahalli</li>
+
+                        <li>Near Lake Shore Homes</li>
+
+                        <li>Bangalore</li>
+
+                        <li>Karnataka :560035 </li>
+                    </ul>
+                    <ul>
+                        <li style="color:red">+91 80 4217 2469 </li>
+                        <li style="color:red">+91 70 2256 7469 </li>
+                    </ul><ul>
+
+                        @*<li> info@lacasarestaurant.com</li>*@
+                        <li>maillacasagrill@gmail.com</li>
+                        <li style="color:red">
+                            www.lacasarestaurant.in
+                        </li>
+                    </ul>
+
+                    <div id="iconsocial">
+                        <ul class="social-network social-circle ">
+                            <li><a href="https://www.facebook.com/Lacasa-1775981265953674/?skip_nax_wizard=true" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/lacasa1233" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://plus.google.com/u/0/117659573175700875205/posts" target="_blank" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://www.linkedin.com/profile/edit?trk=nav_responsive_sub_nav_edit_profile" target="_blank" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="col-sm-5">
+                    <h3>location</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7778.243910330844!2d77.66872102252282!3d12.89987877169947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae136caaaf6215%3A0x18698e4a3858ee82!2sLa+Casa!5e0!3m2!1sen!2sin!4v1463386807220" max-width="500" height="200" frameborder="0" style="border:0;width: 100%;" allowfullscreen"=""></iframe>
+                    <div class="clearfix"></div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div class=" onmicon ">
+                        <center>
+                            <div class="bodyside1 iconwithname">
+                                <a href="http://www.onlinenewsmedia.in/" target="_blank" style="padding: 2px;color: red!important;">
+                                    <p class="web" style="font-size:16px;display:inline">
+                                        web science by
+
+                                </a><a href="http://www.onlinenewsmedia.in/" target="_blank">
+
+                                    <img src="~/Images/home/onm-logo-small-.png" style="display: inline;    width: 34px;
+">
+                                </a>
+
+                                <a href="http://www.onlinenewsmedia.in/" target="_blank" class="link" style="    color:red;
+font-size:16px">www.onlinenewsmedia.in</a>
+
+                                <div class="pull-right">
+
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+<style>
+    .nav > li > a:hover {
+        text-decoration: none;
+        background-color: brown;
+    }
+</style>
