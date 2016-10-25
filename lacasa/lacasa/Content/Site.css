@@ -332,3 +332,107 @@ min-width: 100%;
     text-shadow: 1px 2px 3px #0f1116;
     font-weight: 600;
 }
+
+
+/*cart page*/
+.cartpageitem {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.mycartitem {
+    margin: 0 auto;
+    padding: 0;
+    /*width: 960px;*/
+}
+
+    .mycartitem > ul {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+        .mycartitem > ul > li {
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+        }
+
+            .mycartitem > ul > li > .signinpage {
+                margin: 0 auto;
+                padding: 0;
+                background: #fff;
+            }
+
+                .mycartitem > ul > li > .signinpage > .headerbar {
+                    position: relative;
+                    /*width: 97%;*/
+                    font-size: 18px;
+                    padding: 11px 20px 11px 25px;
+                    margin: 0 -7px 10px -8px;
+                    color: #fff;
+                    background-color: #c36972;
+                }
+
+                    .mycartitem > ul > li > .signinpage > .headerbar:before {
+                        content: ' ';
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        right: 0;
+                        top: 100%;
+                        border-width: 5px 7px 2px 0;
+                        border-style: solid;
+                        border-color: #666 transparent transparent #666;
+                    }
+
+                    .mycartitem > ul > li > .signinpage > .headerbar:after {
+                        content: ' ';
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        left: 0;
+                        top: 100%;
+                        border-width: 6px 1px 0 6px;
+                        border-style: solid;
+                        border-color: #666 #666 transparent transparent;
+                    }
+
+                .mycartitem > ul > li > .signinpage > .headerbarcontent {
+                    margin: 0 auto;
+                    padding: 15px;
+                }
+
+.headerbarcontenttext {
+    margin: 0 auto;
+    padding: 0;
+    font-weight: bold;
+    clear: both;
+    width: 100%;
+}
+
+.fk-input {
+    width: 250px;
+    margin: 5px 0 15px;
+    display: block;
+    width: 250px;
+    margin: 5px 0 15px;
+    display: block;
+}
+.fk-button
+{
+        border: 1px solid #004b91;
+    background: linear-gradient(to bottom,#007fb8 1%,#6ebad5 3%,#059fc6 7%,#007fb8 100%);
+    width: 234px;
+    font-size: 20px;
+    padding: 6px 25px;
+    font-weight: 400;
+    letter-spacing: .03em;
+
+}
+.startlogin1
+{
+    margin:0 auto;
+    padding:0;
+}
+
+/*cart page end*/

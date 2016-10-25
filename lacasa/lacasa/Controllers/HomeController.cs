@@ -113,6 +113,10 @@ namespace lacasa.Controllers
 
             return View();
         }
+        public ActionResult init()
+        {
+            return View();
+        }
        
 
 
